@@ -77,13 +77,11 @@ namespace Assignment1_Summer2021
 
         }
 
-
-
         /*   <summary>
 /// Input: moves = "UD"     Output: true
 /// Explanation: The robot moves up once, and then down once. All moves have the same ///magnitude, so it ended up at the origin where it started. 
 //Therefore, we return true.*/
-      
+
         private static bool JudgeCircle(string moves)
         {
             try
@@ -113,7 +111,7 @@ namespace Assignment1_Summer2021
                     {
                         x++;//robot moves RIGHT to negative X-axis
                     }
-                    else  
+                    else
                     {
                         // Display the below statement if the input does not contain the U,L,R,D letters
                         Console.WriteLine("Invalid input");
@@ -141,8 +139,11 @@ namespace Assignment1_Summer2021
             {
                 throw;
             }
-        }        
-        
+        }
+//SELF REFLECTION: Time Taken - 25 minutes to complete .
+//                  Learning : Learned how to iterate the loop according to the array/string length,
+//                             also,IF loop implementation effectively.
+//                Recommendation: Can inlcude input statment with multiple input strings i.e. a sentence to make it more complex
 
         /* <summary>
 A pangram is a sentence where every letter of the English alphabet appears at least once.Given a string sentence containing only lowercase English letters, 
@@ -181,7 +182,11 @@ A pangram is a sentence where every letter of the English alphabet appears at le
             }
         }
 
-
+       /*SELF REFLECTION:  
+1.	Time Taken - 1 hour to complete.
+2.	Learning : The logic implementation helped me learn hot to take the distinct values and create an array with them.
+3.	Recommendation: Can inlcude input statment with multiple input strings i.e.a sentence and not just a single string input, to make it more complex
+*/
         /* <summary>
  Given an array of integers nums  A pair (i,j) is called good if nums[i] == nums[j] and i < j. Return the number of good pairs.     */
 
@@ -195,13 +200,13 @@ A pangram is a sentence where every letter of the English alphabet appears at le
                 for (int i = 0; i < nums.Length; i++) // picking the nums[i] value to compare
                 {
                     //initiating loop from 1 incremented value than i till array length
-                    for (int j = i + 1; j < nums.Length; j++) 
+                    for (int j = i + 1; j < nums.Length; j++)
 
-                        /* picking the nums[j] value to compare,throughout the array */
+                    /* picking the nums[j] value to compare,throughout the array */
                     {
                         //checking if the the 'i'th value of array nums is equal to 'j'th value of array nums
                         if (nums[i] == nums[j] & i < j)
-                        { 
+                        {
                             //the values found to be equal, increment the count else don't increment
                             count++;
                         }
@@ -216,9 +221,13 @@ A pangram is a sentence where every letter of the English alphabet appears at le
 
                 throw;
             }
-        }      
+        }
+/*SELF REFLECTION:
+ 1.	Time Taken – around 1 hour to complete.
+2.	Learning : Learned how to use nested loops.
+3.	Recommendation: I feel there is no need to change anything in this question. */
 
-        
+
         /*          <summary>   Given an array of integers nums, calculate the pivot index of this array.The pivot index is the index where the sum of
         //all the numbers strictly to the left of  the index is equal to the sum of all the numbers strictly to the index's right.
         //If the index is on the left edge of the array, then the left sum is 0 because there are no elements to the left. This also applies to the right edge of the array.
@@ -267,6 +276,15 @@ A pangram is a sentence where every letter of the English alphabet appears at le
             }
 
         }
+
+
+        /* SELF REFLECTION:
+Ques 4.  
+1.	Time Taken – 1.5 hours to complete .
+2.	Learning : Gained array index knowledge and how to implement and find the solution through nested loops with considering the appropriate loop initiating values.Also, helped to understand the array index comparison.
+3.	Recommendation: This is a perfect example of how to play with the array .  */
+
+
 
         /*   /// <summary>    /// You are given two strings word1 and word2. Merge the strings by adding letters 
         /// in alternating order, starting with word1. If a string is longer than the other,
@@ -318,13 +336,20 @@ A pangram is a sentence where every letter of the English alphabet appears at le
 
         }
 
+        /* SELF REFLECTION:
+
+Ques 5.  
+1.	Time Taken – 50 minutes to complete .
+2.	Learning : Learnt how to tackle and implement the code with the help of string length and logiacal operators.
+3.	Recommendation: we can also trim the second string till the length of first word string and merge them.
+*/
 
 
         /* <summary>      /// A sentence sentence is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
         //We would like to convert the 
         //sentence to "Goat Latin" (a made-up language similar to Pig Latin.) The rules of Goat Latin are as follows: */
-        
-        
+
+
         private static string ToGoatLatin(string sentence)
         {
             try
@@ -373,7 +398,7 @@ A pangram is a sentence where every letter of the English alphabet appears at le
                     {
                         //append the suffix 'a'to the string builder variable sb
                         sb.Append("a");
-                        
+
                     }
 
                     //append  the string builder variable sb with space after every string value of array strArr
@@ -391,3 +416,9 @@ A pangram is a sentence where every letter of the English alphabet appears at le
         }
     }
 }
+
+/* SELF REFLECTION:
+Ques 4.  
+1.	Time Taken – 1.5 hours to complete .
+2.	Learning : this is an amazing example of learning many facts about how to manipulate the string . Learnt the working of substring function, the stringBuilder function. 
+3.	Recommendation: I feel this example is perfect as it is and no need to alter any thing.   */
